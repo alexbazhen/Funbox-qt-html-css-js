@@ -1,1 +1,9 @@
 @use "sass:math";
+
+@import "common/null.scss"; // Default Styles
+@import "common/fonts.scss"; // Link for fonts ('TrebuchetMS', 'Exo2')
+@import "common/mixins.scss";
+
+body {
+  font-family: Exo2, sans-serif;
+}
