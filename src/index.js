@@ -44,7 +44,6 @@ class Pack {
     this.label = document.createElement('blockquote');
 
     this.isSelect = false;
-    this.isMouseLeave = false;
 
     this.isDisable();
   }
@@ -140,20 +139,16 @@ class Pack {
       this.select();
     });
     this.article.addEventListener('mouseleave', (e) => {
-      if (this.isSelect && !this.isMouseLeave) {
-        this.isMouseLeave = true;
-        return;
-      }
-      if (this.isSelect && this.isMouseLeave) {
-        this.article.classList.remove('pack_selected-hover');
-        this.changeLabel();
+      if (this.isSelect) {
+        this.article.classList.add('pack_selected-hover');
+        this.changeLabel(true);
         return;
       }
     });
     this.article.addEventListener('mouseenter', (e) => {
-      if (this.isSelect && this.isMouseLeave) {
-        this.article.classList.add('pack_selected-hover');
-        this.changeLabel(true);
+      if (this.isSelect) {
+        this.article.classList.remove('pack_selected-hover');
+        this.changeLabel();
         return;
       }
     });
