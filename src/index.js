@@ -17,7 +17,6 @@ class Catalog {
       card.append(pack.call);
       this.products.push(card);
     });
-    console.log('Products is getted');
     this.addCards();
     return;
   }
@@ -121,8 +120,6 @@ class Pack {
     if (!option) {
       this.call.innerHTML = `Чего сидишь? Порадуй котэ, <button class="call__btn">купи.</button>`;
     } else {
-      console.log(option);
-      console.log(this.call)
       this.call.innerText = option; 
     }
   }
@@ -137,6 +134,9 @@ class Pack {
   events() {
     this.article.addEventListener('click', (e) => {
       this.select();
+    });
+    this.call.addEventListener('click', (e) => {
+      if (e.target.closest('button')) this.select();
     });
     this.article.addEventListener('mouseleave', (e) => {
       if (this.isSelect) {
