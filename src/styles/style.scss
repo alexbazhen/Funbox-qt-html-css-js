@@ -62,6 +62,13 @@ $colorCallDisabled: #FFFF66;
   padding: 0 rem(15);
 }
 
+.page {
+  &__title {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 @import 'components/feed.scss';
 @import 'components/catalog.scss';
 @import 'components/card.scss';
