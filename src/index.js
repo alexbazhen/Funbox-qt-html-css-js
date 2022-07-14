@@ -46,7 +46,7 @@ class Pack {
     this.isSelect = false;
     this.isMouseLeave = false;
 
-    this.events();
+    this.isDisable();
   }
   create() {
     this.article.classList.add('pack', 'card__pack');
@@ -86,6 +86,9 @@ class Pack {
 
     this.article.querySelector('h3').after(this.label); // Insert label after h3
     this.call.innerHTML = `Чего сидишь? Порадуй котэ, <button class="call__btn">купи.</button>`;
+    if (this.inStock <= 0) {
+      this.changeCall(`Печалька, ${this.flavour} закончился.`);
+    }
 
     return this.article;
   }
@@ -96,6 +99,13 @@ class Pack {
       this.article.classList.add('pack_selected');
       this.changeCall(this.callText); 
       this.isSelect = true;
+    }
+  }
+  isDisable() {
+    if (this.inStock <= 0) {
+      this.article.classList.add('pack_disabled');
+    } else {
+      this.events();
     }
   }
   resetSelect() {
@@ -112,6 +122,8 @@ class Pack {
     if (!option) {
       this.call.innerHTML = `Чего сидишь? Порадуй котэ, <button class="call__btn">купи.</button>`;
     } else {
+      console.log(option);
+      console.log(this.call)
       this.call.innerText = option; 
     }
   }
