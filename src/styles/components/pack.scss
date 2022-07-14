@@ -18,7 +18,7 @@
     width: calc(100% + 8px);
     height: calc(100% + 8px);
     border-radius: rem(12);
-    transition: all .3s;
+    transition: all 1s;
   }
   &__label {
     order: -1;
@@ -27,6 +27,13 @@
     font-size: rem(16);
     line-height: math.div(19, 16);
     color: $colorGrey; 
+
+    .pack_selected-hover & {
+      color: $colorLabelSelectedHover;
+    }
+    .pack_disabled & {
+      color: $colorDisabled;
+    }
   }
   &__name {
     position: relative;
@@ -38,6 +45,10 @@
     line-height: math.div(56, 48);
     margin-top: rem(5);
     letter-spacing: 1.8px;
+
+    .pack_disabled & {
+      color: $colorDisabled;
+    }
   }
   &__flavour {
     font-size: rem(24);
@@ -71,5 +82,33 @@
     max-width: unset;
     height: rem(360);
     object-fit: cover;
+
+    .pack_disabled & {
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+
+  &:hover {
+    &::before {
+      background: linear-gradient(135deg, transparent 30px, $colorBorderDefaultHover 0) top left;
+    }
+  }
+
+  &_selected {
+    &::before {
+      background: linear-gradient(135deg, transparent 30px, $colorSelected 0) top left !important;
+    }
+    &-hover {
+      &::before {
+        background: linear-gradient(135deg, transparent 30px, $colorSelectedHover 0) top left !important;
+      }
+    }
+  }
+  &_disabled {
+    pointer-events: none;
+    &::before {
+      background: linear-gradient(135deg, transparent 30px, $colorDisabled 0) top left !important;
+    }
   }
 }

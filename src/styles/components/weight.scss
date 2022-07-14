@@ -13,9 +13,24 @@
   background: $colorBorderDefault;
   border-radius: 100%;
   padding: rem(10);
+  transition: all .3s;
   &__value {
     font-weight: 400;
     font-size: rem(42);
     line-height: 1;
+  }
+
+  .pack:hover & {
+    background: $colorBorderDefaultHover;
+  }
+
+  .pack_selected & {
+    background: $colorSelected !important;
+  }
+  .pack_selected-hover & {
+    background: $colorSelectedHover !important;
+  }
+  .pack_disabled & {
+    background: $colorDisabled !important;
   }
 }
