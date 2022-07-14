@@ -111,4 +111,8 @@
       background: linear-gradient(135deg, transparent 30px, $colorDisabled 0) top left !important;
     }
   }
+
+  @media (max-width: em(350)){
+    padding: rem(17) rem(37);
+  }
 }
