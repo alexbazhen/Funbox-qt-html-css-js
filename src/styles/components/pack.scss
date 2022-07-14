@@ -1,0 +1,75 @@
+.pack {
+  position: relative;
+  height: rem(472);
+  display: flex;
+  flex-direction: column;
+  margin: rem(4);
+  background: linear-gradient(135deg, transparent 28.5px, $colorBgPack 0) top left;
+  border-radius: rem(12);
+  cursor: pointer;
+  padding: rem(17) rem(47);
+  &::before { // Blue border
+    content: '';
+    position: absolute;
+    background: linear-gradient(135deg, transparent 30px, $colorBorderDefault 0) top left;
+    top: rem(-4);
+    left: rem(-4);
+    z-index: -1;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: rem(12);
+    transition: all .3s;
+  }
+  &__label {
+    order: -1;
+    margin: 0;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: math.div(19, 16);
+    color: $colorGrey; 
+  }
+  &__name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: rem(-3);
+    font-weight: 700;
+    font-size: rem(48);
+    line-height: math.div(56, 48);
+    margin-top: rem(5);
+    letter-spacing: 1.8px;
+  }
+  &__flavour {
+    font-size: rem(24);
+    line-height: math.div(28, 24);
+    padding-left: rem(3);
+    letter-spacing: 0.6px;
+  }
+  &__feature {
+    margin-top: rem(15);
+  }
+  &__weight {
+    position: absolute;
+    z-index: 2;
+    bottom: rem(12);
+    right: rem(12);
+  }
+  &__image {
+    height: rem(268);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: rem(12);
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: rem(-28);
+    width: rem(368);
+    max-width: unset;
+    height: rem(360);
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,9 @@
+.feature {
+  font-weight: 400;
+  font-size: rem(14);
+  line-height: math.div(16, 14);
+  color: $colorGrey;
+  &__num {
+    font-weight: 700;
+  }
+}

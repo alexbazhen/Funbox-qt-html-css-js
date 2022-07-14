@@ -4,6 +4,10 @@
 @import "common/fonts.scss"; // Link for fonts ('TrebuchetMS', 'Exo2')
 @import "common/mixins.scss";
 
+$colorBgPack: #F2F2F2;
+$colorBorderDefault: #1698D9;
+$colorGrey: #666666;
+
 * {
   font-family: 'TrebuchetMS', sans-serif;
 }
@@ -21,7 +25,7 @@
   }
   &::before {
     position: absolute;
-    z-index: -2;
+    z-index: -10;
     background: url('../img/body/body-bg.png') 0 0 repeat;
     height: 100%;
   }
@@ -29,7 +33,7 @@
     position: fixed;
     height: 100vh;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%);
-    z-index: -1;
+    z-index: -5;
   }
 }
 
@@ -46,3 +50,11 @@
   max-width: rem(1120);
   padding: 0 rem(15);
 }
+
+@import 'components/feed.scss';
+@import 'components/catalog.scss';
+@import 'components/card.scss';
+@import 'components/pack.scss';
+@import 'components/feature.scss';
+@import 'components/weight.scss';
+@import 'components/call.scss';
