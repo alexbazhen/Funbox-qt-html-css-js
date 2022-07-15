@@ -8,4 +8,6 @@
 > There will be answers here soon
 
 ## 👨‍💻 Level 2 - Practice
-`TODO: The layout result will be here soon`
+🚀 Ссылка на готовую работу: https://alexbazhen.github.io/Funbox-qt-html-css-js/
+
+ℹ️ Pull Request с описанием выполненной работы: https://github.com/alexbazhen/Funbox-qt-html-css-js/pull/1
