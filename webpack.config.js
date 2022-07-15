@@ -31,7 +31,12 @@ const config = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+          cleanOnceBeforeBuildPatterns: [
+            '**/*',
+            '!.git',
+          ]
+        }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
