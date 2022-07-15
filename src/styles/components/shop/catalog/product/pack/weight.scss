@@ -1,0 +1,36 @@
+.weight {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 400;
+  font-size: rem(21);
+  line-height: math.div(22, 21);
+  color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  width: rem(80);
+  height: rem(80);
+  background: $colorBorderDefault;
+  border-radius: 100%;
+  padding: rem(10);
+  transition: all .3s;
+  &__value {
+    font-weight: 400;
+    font-size: rem(42);
+    line-height: 1;
+  }
+
+  .pack:hover & {
+    background: $colorBorderDefaultHover;
+  }
+
+  .pack_selected & {
+    background: $colorSelected !important;
+  }
+  .pack_selected-hover & {
+    background: $colorSelectedHover !important;
+  }
+  .pack_disabled & {
+    background: $colorDisabled !important;
+  }
+}

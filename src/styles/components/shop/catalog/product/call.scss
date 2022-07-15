@@ -1,0 +1,38 @@
+.call {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: rem(13);
+  line-height: math.div(15, 13);
+  text-align: center;
+  &__btn {
+    background: none;
+    color: $colorBorderDefault;
+    position: relative;
+    border: none;
+    padding: 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+    &::after {
+      position: absolute;
+      content: '';
+      width: rem(28);
+      height: rem(1);
+      background: url('../assets/img/call/dashed.svg') center center no-repeat;
+      top: rem(15);
+      left: 50%;
+      transform: translateX(-60%);
+    }
+
+    &:hover {
+      color: $colorBtnDefaultHover;
+    }
+  }
+
+  .pack_disabled~& {
+    color: $colorCallDisabled;
+    .call__btn {
+      display: none;
+    }
+  }
+}

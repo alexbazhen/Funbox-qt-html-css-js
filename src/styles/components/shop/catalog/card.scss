@@ -1,0 +1,14 @@
+.card {
+  width: rem(320);
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+  transition: all .3s;
+
+  @media (max-width: em(350)){
+    width: rem(300);
+  }
+}
+
+@import 'product/pack.scss';
+@import 'product/call.scss';
