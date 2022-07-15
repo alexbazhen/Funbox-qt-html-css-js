@@ -48,11 +48,17 @@ const config = {
               noErrorOnMissing: true
             },
             {
-              from: path.resolve(__dirname, 'src/img'),
-              to: path.resolve(__dirname, 'dist/img'),
+              from: path.resolve(__dirname, 'src/assets/img'),
+              to: path.resolve(__dirname, 'dist/assets/img'),
               noErrorOnMissing: true,
               force: true
-            }
+            },
+            {
+              from: path.resolve(__dirname, 'src/data'),
+              to: path.resolve(__dirname, 'dist/data'),
+              noErrorOnMissing: true,
+              force: true
+            },
           ]
         })
     ],
@@ -74,14 +80,14 @@ const config = {
                 test: /\.(eot|ttf|woff|woff2)$/i,
                 type: 'asset',
                 generator: {
-                  filename: 'fonts/[hash][ext][query]'
+                  filename: 'assets/fonts/[hash][ext][query]'
                 }
             },
             {
                 test: /\.(svg|png|jpg|gif)$/i,
                 type: 'asset',
                 generator: {
-                  filename: 'img/[hash][ext][query]'
+                  filename: 'assets/img/[hash][ext][query]'
                 }
             },
 

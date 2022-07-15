@@ -37,7 +37,7 @@ $colorCallDisabled: #FFFF66;
   &::before {
     position: absolute;
     z-index: -10;
-    background: url('../img/body/body-bg.png') 0 0 repeat;
+    background: url('../assets/img/body/body-bg.png') 0 0 repeat;
     height: 100%;
   }
   &::after {
@@ -74,9 +74,3 @@ $colorCallDisabled: #FFFF66;
 }
 
 @import 'components/feed.scss';
-@import 'components/catalog.scss';
-@import 'components/card.scss';
-@import 'components/pack.scss';
-@import 'components/feature.scss';
-@import 'components/weight.scss';
-@import 'components/call.scss';

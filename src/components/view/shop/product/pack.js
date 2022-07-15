@@ -1,36 +1,3 @@
-import './styles/style.scss';
-import App from './components/app';
-
-/*import products from './shop/packs';
-class Catalog {
-  constructor() {
-    this.elem = document.querySelector('.catalog') ?? document.body;
-    this.products = [];
-  }
-  init() {
-    if (!products) throw new Error('No database of products');
-    this.clear();
-    products.forEach(product => {
-      const pack = new Pack(product.flavour, product.label, product.inStock, product.weight, product.call, product.feature);
-      const card = document.createElement('li');
-      card.classList.add('card', 'catalog__card');
-      card.append(pack.create());
-      card.append(pack.call);
-      this.products.push(card);
-    });
-    this.addCards();
-    return;
-  }
-  addCards() {
-    this.products.forEach(product => {
-      this.elem.append(product);
-    });
-  }
-  clear() {
-    if (!this.elem.querySelector('li')) throw new Error('Nothing delete');
-    this.elem.querySelectorAll('li').forEach(product => product.remove());
-  }
-}
 class Pack {
   constructor(flavour, label, inStock, weight, call, feature) {
     this.flavour = flavour;
@@ -80,7 +47,7 @@ class Pack {
         <span class="weight__value">${this.weight}</span>кг
       </p>
       <div class="pack__image">
-        <img src="img/pack/cat.png" alt="Фото послушного котика, который любит нямушку" class="pack__img">
+        <img src="assets/img/pack/cat.png" alt="Фото послушного котика, который любит нямушку" class="pack__img">
       </div>`;
 
     this.article.querySelector('h3').after(this.label); // Insert label after h3
@@ -96,7 +63,7 @@ class Pack {
       this.resetSelect();
     } else {
       this.article.classList.add('pack_selected');
-      this.changeCall(this.callText); 
+      this.changeCall(this.callText);
       this.isSelect = true;
     }
   }
@@ -121,7 +88,7 @@ class Pack {
     if (!option) {
       this.call.innerHTML = `Чего сидишь? Порадуй котэ, <button class="call__btn">купи.</button>`;
     } else {
-      this.call.innerText = option; 
+      this.call.innerText = option;
     }
   }
   changeLabel(option) {
@@ -156,14 +123,4 @@ class Pack {
   }
 }
 
-const app = new Catalog();
-app.init();
-
-console.log(window.location)
-
-const rootUrl = `${window.location.protocol}//${window.location.hostname}/`;
-console.log(rootUrl)*/
-
-
-const app = new App();
-app.start();
+export default Pack;
